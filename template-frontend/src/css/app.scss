@@ -1,0 +1,188 @@
+* {
+  --sb-size: 7px;
+}
+
+::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--q-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--q-primary), var(--q-secondary));
+  border-radius: 3px;
+}
+
+//override autofill background to dark
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--q-dark) inset !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 0 !important;
+}
+//override autofill background to dark
+input:-webkit-autofill::placeholder,
+textarea:-webkit-autofill::placeholder {
+  -webkit-text-fill-color: #fff !important;
+  border: 0 !important;
+}
+//override autofill background to dark
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px var(--q-dark) inset !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+//loop br from 2-50
+@for $i from 2 through 50 {
+  .br-#{$i} {
+    border-radius: #{$i}px;
+  }
+}
+
+//loop font from 8 - 72 font-8
+@for $i from 8 through 72 {
+  .font-#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+//loop width from 1 - 100
+@for $step from 1 through 1000 {
+  $i: $step * 5;
+  .w-#{$i} {
+    width: #{$i}px !important;
+  }
+}
+//loop width %
+@for $step from 1 through 100 {
+  $i: $step * 5%;
+  .wp-#{$step * 5} {
+    width: $i; // no extra % needed
+  }
+}
+
+//loop height from 1 - 100
+@for $step from 1 through 1000 {
+  $i: $step * 5;
+  .h-#{$i} {
+    height: #{$i}px !important;
+  }
+}
+
+//loop min width
+@for $step from 1 through 1000 {
+  $i: $step * 5;
+  .min-w-#{$i} {
+    min-width: #{$i}px;
+  }
+}
+
+//loop min height
+@for $step from 1 through 1000 {
+  $i: $step * 5;
+  .min-h-#{$i} {
+    min-height: #{$i}px;
+  }
+}
+
+//loop max width
+@for $step from 1 through 1000 {
+  $i: $step * 5;
+  .max-w-#{$i} {
+    max-width: #{$i}px;
+  }
+}
+
+//loop max height
+@for $step from 1 through 1000 {
+  $i: $step * 5;
+  .max-h-#{$i} {
+    max-height: #{$i}px;
+  }
+}
+
+//loop dimensions example dimension-40
+@for $step from 1 through 1000 {
+  $i: $step * 5;
+  .dimension-#{$i} {
+    width: #{$i}px !important;
+    height: #{$i}px !important;
+  }
+}
+
+
+//loop border for dark grey
+@for $i from 1 through 50 {
+  .border-dark-#{$i} {
+    border: solid #{$i}px  var(--q-dark) !important;
+  }
+}
+
+//loop border-dark-grey
+@for $i from 1 through 50 {
+  .border-dark-grey-#{$i} {
+    border: solid #{$i}px #303030 !important;
+  }
+}
+
+@for $i from 1 through 50 {
+  .border-secondary-#{$i} {
+    border: solid #{$i}px var(--q-secondary) !important;
+  }
+}
+
+@for $i from 1 through 50 {
+  .border-primary-#{$i} {
+    border: solid #{$i}px var(--q-primary) !important;
+  }
+}
+
+@for $i from 1 through 50 {
+  .border-white-#{$i} {
+    border: solid #{$i}px #ffffff !important;
+  }
+}
+
+@for $i from 1 through 50 {
+  .border-black-#{$i} {
+    border: solid #{$i}px #000000 !important;
+  }
+}
+
+.q-btn-linear {
+  background: linear-gradient(90deg, var(--q-primary) 0%, var(--q-secondary) 100%) !important;
+}
+
+.margin-auto {
+  margin: 0 auto !important;
+}
+
+.text-start {
+  text-align: start !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-end {
+  text-align: end !important;
+}
+
+.no-select {
+  /* Standard */
+  user-select: none;
+  /* WebKit (Safari, older Chrome) */
+  -webkit-user-select: none;
+  /* Gecko (older Firefox) */
+  -moz-user-select: none;
+  /* IE/Edge */
+  -ms-user-select: none;
+}
