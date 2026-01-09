@@ -13,7 +13,7 @@ Bridge47 is a powerful code generation tool designed to speed up the development
   - **Backend**: NestJS with TypeORM, JWT authentication, RBAC (Roles), logging, and more.
   - **Frontend**: Quasar framework (Vue 3) with generated API clients and UI components.
 - **Customizable Templates**: Includes `template-backend` and `template-frontend` which act as the base for generation.
-- **Secure & Production Ready**: 
+- **Secure & Production Ready**:
   - Backend includes setup for ClamAV (virus scanning) and Redis (caching), togglable via `.env`.
   - Secure authentication flow awaiting your configuration.
 
@@ -27,30 +27,31 @@ Bridge47 is a powerful code generation tool designed to speed up the development
 ## Getting Started
 
 1.  **Clone the repository**:
+
     ```bash
     git clone https://github.com/nextera-one/bridge47.git
     cd bridge47
     ```
 
 2.  **Setup Templates**:
-    -   **Backend**:
-        ```bash
-        cd template-backend
-        cp .env.example .env
-        npm install
-        npm run start:dev
-        ```
-    -   **Frontend**:
-        ```bash
-        cd template-frontend
-        npm install
-        npm run dev
-        ```
+    - **Backend**:
+      ```bash
+      cd template-backend
+      cp .env.example .env
+      npm install
+      npm run start:dev
+      ```
+    - **Frontend**:
+      ```bash
+      cd template-frontend
+      npm install
+      npm run dev
+      ```
 
 3.  **Run the Generator**:
-    -   Configure your database connection in `src/generator.config.ts` (or equivalent config).
-    -   Run the generator script (add specific instructions here once finalized).
+    - Configure your database connection in `src/generator.config.ts` (or equivalent config).
+    - Run the generator script (add specific instructions here once finalized).
 
 ## License
 
-[License Name]
+MIT License. See [LICENSE.md](LICENSE.md).
